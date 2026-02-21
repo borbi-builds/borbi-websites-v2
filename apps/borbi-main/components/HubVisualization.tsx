@@ -90,7 +90,7 @@ export function HubVisualization({ arms }: HubVisualizationProps) {
         })}
 
         {/* Center hub */}
-        <circle cx={cx} cy={cy} r={32} fill="#FF6B2C" opacity={0.9} />
+        <circle cx={cx} cy={cy} r={32} fill="#6C3CE0" opacity={0.9} />
         <text
           x={cx}
           y={cy + 1}

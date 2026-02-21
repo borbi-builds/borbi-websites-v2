@@ -9,14 +9,18 @@ const preset = {
     extend: {
       colors: {
         bg: {
-          void: backgrounds.void,
+          primary: backgrounds.primary,
+          secondary: backgrounds.secondary,
+          tertiary: backgrounds.tertiary,
           surface: backgrounds.surface,
           elevated: backgrounds.elevated,
+          light: backgrounds.light,
           subtle: backgrounds.subtle,
         },
         accent: {
           primary: 'var(--accent-primary, ' + accents.primary + ')',
           secondary: accents.secondary,
+          brightPurple: accents.brightPurple,
           glow: accents.glow,
           frost: accents.frost,
         },
@@ -24,6 +28,8 @@ const preset = {
           primary: text.primary,
           secondary: text.secondary,
           muted: text.muted,
+          onDark: text.onDark,
+          onLight: text.onLight,
         },
         arm: armAccents,
       },

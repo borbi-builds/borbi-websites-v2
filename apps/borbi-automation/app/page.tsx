@@ -25,7 +25,7 @@ const integrations = [
 export default function AutomationPage() {
   return (
     <>
-      <Nav brand="Borbi | Automation" links={navLinks} accentColor="#22D3EE" />
+      <Nav brand="Borbi | Automation" links={navLinks} accentColor="#6C3CE0" />
 
       {/* Hero — The Workflow */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
@@ -41,29 +41,29 @@ export default function AutomationPage() {
               <line x1="60" y1="65" x2="180" y2="135" stroke="#DC2626" strokeWidth="1.5" opacity="0.5" />
 
               {/* Arrow */}
-              <motion.line x1="200" y1="100" x2="310" y2="100" stroke="#22D3EE" strokeWidth="1.5"
+              <motion.line x1="200" y1="100" x2="310" y2="100" stroke="#6C3CE0" strokeWidth="1.5"
                 initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.5, duration: 0.8 }} />
 
               {/* Borbi Automation */}
-              <motion.rect x="320" y="70" width="160" height="60" rx="12" fill="#22D3EE" fillOpacity="0.1" stroke="#22D3EE" strokeWidth="1.5"
+              <motion.rect x="320" y="70" width="160" height="60" rx="12" fill="#6C3CE0" fillOpacity="0.1" stroke="#6C3CE0" strokeWidth="1.5"
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }} />
-              <text x="400" y="95" textAnchor="middle" fill="#22D3EE" fontSize="11" fontFamily="Inter" fontWeight="600">Borbi Automation</text>
+              <text x="400" y="95" textAnchor="middle" fill="#6C3CE0" fontSize="11" fontFamily="Inter" fontWeight="600">Borbi Automation</text>
               <text x="400" y="115" textAnchor="middle" fill="#5CEBDF" fontSize="9" fontFamily="Inter">n8n • AI • APIs</text>
 
               {/* Arrow */}
-              <motion.line x1="490" y1="100" x2="600" y2="100" stroke="#22D3EE" strokeWidth="1.5"
+              <motion.line x1="490" y1="100" x2="600" y2="100" stroke="#6C3CE0" strokeWidth="1.5"
                 initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 1.2, duration: 0.8 }} />
 
               {/* Done */}
-              <motion.rect x="610" y="70" width="140" height="60" rx="12" fill="#10B981" fillOpacity="0.1" stroke="#10B981" strokeWidth="1.5"
+              <motion.rect x="610" y="70" width="140" height="60" rx="12" fill="#6C3CE0" fillOpacity="0.1" stroke="#6C3CE0" strokeWidth="1.5"
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }} />
-              <text x="680" y="95" textAnchor="middle" fill="#10B981" fontSize="11" fontFamily="Inter" fontWeight="600">Done in Seconds</text>
-              <text x="680" y="115" textAnchor="middle" fill="#10B981" fontSize="9" fontFamily="Inter">✓ Automated</text>
+              <text x="680" y="95" textAnchor="middle" fill="#6C3CE0" fontSize="11" fontFamily="Inter" fontWeight="600">Done in Seconds</text>
+              <text x="680" y="115" textAnchor="middle" fill="#6C3CE0" fontSize="9" fontFamily="Inter">✓ Automated</text>
             </motion.g>
 
             {/* Flow particles */}
             {[0, 1, 2].map((i) => (
-              <motion.circle key={i} r="3" fill="#22D3EE"
+              <motion.circle key={i} r="3" fill="#6C3CE0"
                 animate={{ cx: [200, 310, 490, 600], cy: [100, 100, 100, 100] }}
                 transition={{ repeat: Infinity, duration: 3, delay: i * 1, ease: 'linear' }} />
             ))}
@@ -72,10 +72,10 @@ export default function AutomationPage() {
 
         <div className="relative z-10 text-center max-w-[900px]">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }}
-            className="text-sm uppercase tracking-[0.04em] text-[#22D3EE] mb-6">Borbi Automation</motion.div>
+            className="text-sm uppercase tracking-[0.04em] text-[#6C3CE0] mb-6">Borbi Automation</motion.div>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.5 }}
             className="font-display text-display text-text-primary">
-            Stop Working.<br />Start Automating.
+            Workflow Automation<br />That Actually Works
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55, duration: 0.5 }}
             className="text-lg text-text-secondary mt-6 max-w-xl mx-auto">
@@ -110,7 +110,7 @@ export default function AutomationPage() {
         <div className="grid grid-cols-4 md:grid-cols-8 gap-4 max-w-3xl mx-auto">
           {integrations.map((name, i) => (
             <ScrollReveal key={name} delay={i * 0.03}>
-              <div className="aspect-square bg-bg-surface border border-white/[0.04] rounded-borbi-md flex items-center justify-center text-xs text-text-muted hover:border-[#22D3EE]/30 hover:text-[#22D3EE] transition-all duration-300 cursor-default group">
+              <div className="aspect-square bg-bg-surface border border-white/[0.04] rounded-borbi-md flex items-center justify-center text-xs text-text-muted hover:border-[#6C3CE0]/30 hover:text-[#6C3CE0] transition-all duration-300 cursor-default group">
                 <span className="text-center leading-tight">{name}</span>
               </div>
             </ScrollReveal>
@@ -150,13 +150,13 @@ export default function AutomationPage() {
         </ScrollReveal>
         {studies.map((study) => (
           <div key={study.id} className="mb-16">
-            <StoryEngine study={study} accentColor="#22D3EE" />
+            <StoryEngine study={study} accentColor="#6C3CE0" />
           </div>
         ))}
       </Section>
 
       {/* CTA */}
-      <Section id="contact" className="text-center bg-gradient-to-b from-transparent to-[#22D3EE]/5">
+      <Section id="contact" className="text-center bg-gradient-to-b from-transparent to-[#6C3CE0]/5">
         <ScrollReveal>
           <h2 className="font-display text-h1 text-text-primary mb-4">Calculate Your Time Savings</h2>
           <p className="text-lg text-text-secondary max-w-xl mx-auto mb-10">

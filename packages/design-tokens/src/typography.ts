@@ -1,8 +1,10 @@
-/** Borbi Enterprises Design Tokens — Typography */
+/** Borbi Enterprises Design Tokens — Typography
+ * v2 Brand Fonts (FINAL)
+ */
 
 export const fontFamilies = {
-  display: '"Instrument Serif", Georgia, serif',
-  body: '"Inter", -apple-system, sans-serif',
+  display: '"Söhne", "Helvetica Neue", sans-serif',
+  body: '"Freight Text Pro", Georgia, serif',
   mono: '"JetBrains Mono", monospace',
 } as const;
 

@@ -18,11 +18,11 @@ const navLinks = [
 ];
 
 const arms = [
-  { name: 'Marketing', color: '#FF6B2C', icon: '📈', desc: 'Lead gen, paid media, SEO, and growth systems that fill your pipeline.', href: '/marketing' },
-  { name: 'Website Services', color: '#A855F7', icon: '🌐', desc: 'High-converting websites that make people stop scrolling.', href: '/web-services' },
-  { name: 'Automation', color: '#22D3EE', icon: '⚡', desc: 'Workflow automation that eliminates manual work and scales operations.', href: '/automation' },
-  { name: 'Equity Research', color: '#10B981', icon: '📊', desc: 'Institutional-grade research and due diligence at startup speed.', href: '/equity-research' },
-  { name: 'Training & Agents', color: '#F59E0B', icon: '🤖', desc: 'AI agent training and deployment for teams ready to level up.', href: '/training' },
+  { name: 'Marketing', color: '#6C3CE0', icon: '📈', desc: 'Lead gen, paid media, SEO, and growth systems that fill your pipeline.', href: '/marketing' },
+  { name: 'Website Services', color: '#6C3CE0', icon: '🌐', desc: 'High-converting websites that make people stop scrolling.', href: '/web-services' },
+  { name: 'Automation', color: '#6C3CE0', icon: '⚡', desc: 'Workflow automation that eliminates manual work and scales operations.', href: '/automation' },
+  { name: 'Equity Research', color: '#6C3CE0', icon: '📊', desc: 'Institutional-grade research and due diligence at startup speed.', href: '/equity-research' },
+  { name: 'Training & Agents', color: '#6C3CE0', icon: '🤖', desc: 'AI agent training and deployment for teams ready to level up.', href: '/training' },
 ];
 
 const stats = [
@@ -51,10 +51,9 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5, ease: easings.outExpo as unknown as number[] }}
-            className="font-display text-display text-text-primary leading-[1.05] tracking-[-0.03em]"
+            className="font-display text-display bg-gradient-to-r from-[#0D1B2A] to-[#2D1B69] bg-clip-text text-transparent leading-[1.05] tracking-[-0.03em]"
           >
-            We don&apos;t just consult.<br />
-            We build the machine.
+            AI-Powered Business at Scale
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

@@ -21,7 +21,7 @@ const studies = getCaseStudiesByArm('marketing');
 export default function MarketingPage() {
   return (
     <>
-      <Nav brand="Borbi | Marketing" links={navLinks} accentColor="#FF6B2C" />
+      <Nav brand="Borbi | Marketing" links={navLinks} accentColor="#6C3CE0" />
 
       {/* Hero — The Dashboard */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -33,7 +33,7 @@ export default function MarketingPage() {
               {[20, 35, 28, 45, 52, 48, 62, 78, 85, 92, 110, 142].map((h, i) => (
                 <motion.div
                   key={i}
-                  className="flex-1 bg-[#FF6B2C] rounded-t-sm"
+                  className="flex-1 bg-[#6C3CE0] rounded-t-sm"
                   initial={{ height: 0 }}
                   animate={{ height: `${(h / 142) * 100}%` }}
                   transition={{ delay: 0.8 + i * 0.05, duration: 0.4 }}
@@ -43,7 +43,7 @@ export default function MarketingPage() {
           </div>
           <div className="absolute top-[20%] right-[10%] w-48 h-32 bg-bg-surface rounded-borbi-lg border border-white/[0.04] p-4">
             <div className="text-xs text-text-muted mb-1">Conversion Rate</div>
-            <div className="font-display text-3xl text-[#FF6B2C]">8.4%</div>
+            <div className="font-display text-3xl text-[#6C3CE0]">8.4%</div>
             <div className="text-xs text-green-400 mt-1">↑ 340% vs baseline</div>
           </div>
           <div className="absolute bottom-[25%] left-[20%] w-56 h-28 bg-bg-surface rounded-borbi-lg border border-white/[0.04] p-4">
@@ -57,7 +57,7 @@ export default function MarketingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.5, ease: easings.outExpo as unknown as number[] }}
-            className="text-sm uppercase tracking-[0.04em] text-[#FF6B2C] mb-6"
+            className="text-sm uppercase tracking-[0.04em] text-[#6C3CE0] mb-6"
           >
             Borbi Marketing
           </motion.div>
@@ -67,7 +67,7 @@ export default function MarketingPage() {
             transition={{ delay: 0.4, duration: 0.5, ease: easings.outExpo as unknown as number[] }}
             className="font-display text-display text-text-primary"
           >
-            We Turn Clicks<br />Into Clients
+            62 Qualified Leads<br />In 30 Days
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -127,7 +127,7 @@ export default function MarketingPage() {
                 <div className="text-center max-w-sm">
                   <div className="text-6xl mb-4">🚀</div>
                   <div className="font-display text-h2 text-text-primary">Optimized Growth Engine</div>
-                  <div className="text-[#FF6B2C] mt-2 font-semibold">8.4% conversion rate</div>
+                  <div className="text-[#6C3CE0] mt-2 font-semibold">8.4% conversion rate</div>
                   <div className="text-text-secondary">A/B tested • AI-optimized • Revenue tracked</div>
                 </div>
               </div>
@@ -168,7 +168,7 @@ export default function MarketingPage() {
         </ScrollReveal>
         {studies.map((study) => (
           <div key={study.id} className="mb-16">
-            <StoryEngine study={study} accentColor="#FF6B2C" />
+            <StoryEngine study={study} accentColor="#6C3CE0" />
           </div>
         ))}
       </Section>
@@ -182,7 +182,7 @@ export default function MarketingPage() {
           {['Audit', 'Strategy', 'Execute', 'Optimize', 'Scale'].map((step, i) => (
             <ScrollReveal key={step} delay={i * 0.08}>
               <div className="flex-1 text-center">
-                <div className="w-12 h-12 rounded-full bg-[#FF6B2C]/10 text-[#FF6B2C] flex items-center justify-center mx-auto mb-4 text-sm font-mono font-bold">
+                <div className="w-12 h-12 rounded-full bg-[#6C3CE0]/10 text-[#6C3CE0] flex items-center justify-center mx-auto mb-4 text-sm font-mono font-bold">
                   {String(i + 1).padStart(2, '0')}
                 </div>
                 <h3 className="font-semibold text-text-primary">{step}</h3>
@@ -207,7 +207,7 @@ export default function MarketingPage() {
       </Section>
 
       {/* CTA */}
-      <Section id="contact" className="text-center bg-gradient-to-b from-transparent to-[#FF6B2C]/5">
+      <Section id="contact" className="text-center bg-gradient-to-b from-transparent to-[#6C3CE0]/5">
         <ScrollReveal>
           <h2 className="font-display text-h1 text-text-primary mb-4">Ready to Fill Your Pipeline?</h2>
           <p className="text-lg text-text-secondary max-w-xl mx-auto mb-10">

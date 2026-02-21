@@ -1,0 +1,35 @@
+
+> build
+> turbo build
+
+• turbo 2.8.10
+• Packages in scope: @borbi/components, @borbi/data, @borbi/design-tokens, borbi-automation, borbi-equity-research, borbi-main, borbi-marketing, borbi-training, borbi-web-services
+• Running build in 9 packages
+• Remote caching disabled
+@borbi/design-tokens:build: cache miss, executing 3ac0bd9cb2b76904
+@borbi/data:build: cache hit, replaying logs c64134fa65741fa1
+@borbi/data:build: 
+@borbi/data:build: > @borbi/data@1.0.0 build
+@borbi/data:build: > tsc --noEmit
+@borbi/data:build: 
+@borbi/design-tokens:build: 
+@borbi/design-tokens:build: > @borbi/design-tokens@1.0.0 build
+@borbi/design-tokens:build: > tsc
+@borbi/design-tokens:build: 
+@borbi/design-tokens:build: src/colors.ts(66,30): error TS2339: Property 'void' does not exist on type '{ readonly primary: "#0D1B2A"; readonly secondary: "#2D1B69"; readonly tertiary: "#1C1C1E"; readonly surface: "#2C2C2E"; readonly elevated: "#1B2D45"; readonly light: "#FAF8F5"; readonly subtle: "#F5F2ED"; }'.
+@borbi/design-tokens:build: npm error Lifecycle script `build` failed with error:
+@borbi/design-tokens:build: npm error code 2
+@borbi/design-tokens:build: npm error path /Users/wyattborbi/.openclaw/borbi-builds/brand-websites-v2/packages/design-tokens
+@borbi/design-tokens:build: npm error workspace @borbi/design-tokens@1.0.0
+@borbi/design-tokens:build: npm error location /Users/wyattborbi/.openclaw/borbi-builds/brand-websites-v2/packages/design-tokens
+@borbi/design-tokens:build: npm error command failed
+@borbi/design-tokens:build: npm error command sh -c tsc
+@borbi/design-tokens:build: ERROR: command finished with error: command (/Users/wyattborbi/.openclaw/borbi-builds/brand-websites-v2/packages/design-tokens) /opt/homebrew/bin/npm run build exited (2)
+@borbi/design-tokens#build: command (/Users/wyattborbi/.openclaw/borbi-builds/brand-websites-v2/packages/design-tokens) /opt/homebrew/bin/npm run build exited (2)
+
+ Tasks:    1 successful, 2 total
+Cached:    1 cached, 2 total
+  Time:    521ms 
+Failed:    @borbi/design-tokens#build
+
+ ERROR  run failed: command  exited (2)

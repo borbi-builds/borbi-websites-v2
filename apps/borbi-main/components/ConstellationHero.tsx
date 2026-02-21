@@ -14,18 +14,18 @@ interface Node {
 }
 
 const streams: { label: string; color: string }[] = [
-  { label: 'SEO', color: '#FF6B2C' },
-  { label: 'Paid Ads', color: '#FF6B2C' },
-  { label: 'Email', color: '#FF6B2C' },
-  { label: 'Web Design', color: '#A855F7' },
-  { label: 'Dev', color: '#A855F7' },
-  { label: 'E-Commerce', color: '#A855F7' },
-  { label: 'Workflows', color: '#22D3EE' },
-  { label: 'Integrations', color: '#22D3EE' },
-  { label: 'Research', color: '#10B981' },
-  { label: 'Analysis', color: '#10B981' },
-  { label: 'Training', color: '#F59E0B' },
-  { label: 'Agents', color: '#F59E0B' },
+  { label: 'SEO', color: '#6C3CE0' },
+  { label: 'Paid Ads', color: '#6C3CE0' },
+  { label: 'Email', color: '#6C3CE0' },
+  { label: 'Web Design', color: '#6C3CE0' },
+  { label: 'Dev', color: '#6C3CE0' },
+  { label: 'E-Commerce', color: '#6C3CE0' },
+  { label: 'Workflows', color: '#6C3CE0' },
+  { label: 'Integrations', color: '#6C3CE0' },
+  { label: 'Research', color: '#6C3CE0' },
+  { label: 'Analysis', color: '#6C3CE0' },
+  { label: 'Training', color: '#6C3CE0' },
+  { label: 'Agents', color: '#6C3CE0' },
   { label: 'Consulting', color: '#5CEBDF' },
 ];
 

@@ -21,7 +21,7 @@ const techStack = ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'Framer Mot
 export default function WebServicesPage() {
   return (
     <>
-      <Nav brand="Borbi | Websites" links={navLinks} accentColor="#A855F7" />
+      <Nav brand="Borbi | Websites" links={navLinks} accentColor="#6C3CE0" />
 
       {/* Hero — The Browser Window */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
@@ -42,7 +42,7 @@ export default function WebServicesPage() {
                 <div className="flex-1 ml-4 bg-bg-void rounded-full px-4 py-1 text-xs text-text-muted">yoursite.com</div>
               </div>
               {/* Scrolling content mockup */}
-              <div className="h-64 bg-gradient-to-b from-[#A855F7]/10 to-bg-void p-8 relative overflow-hidden">
+              <div className="h-64 bg-gradient-to-b from-[#6C3CE0]/10 to-bg-void p-8 relative overflow-hidden">
                 <motion.div
                   animate={{ y: [0, -100, 0] }}
                   transition={{ repeat: Infinity, duration: 8, ease: 'easeInOut' }}
@@ -51,9 +51,9 @@ export default function WebServicesPage() {
                   <div className="h-4 w-64 bg-white/5 rounded mb-2" />
                   <div className="h-4 w-56 bg-white/5 rounded mb-8" />
                   <div className="grid grid-cols-3 gap-4">
-                    <div className="h-24 bg-[#A855F7]/10 rounded-lg" />
-                    <div className="h-24 bg-[#A855F7]/10 rounded-lg" />
-                    <div className="h-24 bg-[#A855F7]/10 rounded-lg" />
+                    <div className="h-24 bg-[#6C3CE0]/10 rounded-lg" />
+                    <div className="h-24 bg-[#6C3CE0]/10 rounded-lg" />
+                    <div className="h-24 bg-[#6C3CE0]/10 rounded-lg" />
                   </div>
                   <div className="mt-8 h-4 w-40 bg-white/5 rounded mb-2" />
                   <div className="h-32 bg-white/5 rounded-lg mt-4" />
@@ -68,7 +68,7 @@ export default function WebServicesPage() {
             transition={{ delay: 0.5, duration: 0.5, ease: easings.outExpo as unknown as number[] }}
             className="font-display text-display text-text-primary"
           >
-            Websites That Make<br />People Stop Scrolling
+            Design-First<br />Web Development
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -104,7 +104,7 @@ export default function WebServicesPage() {
       <Section className="!py-12 overflow-hidden">
         <div className="flex gap-12 animate-scroll">
           {[...techStack, ...techStack].map((tech, i) => (
-            <span key={i} className="text-text-muted text-sm uppercase tracking-wide whitespace-nowrap hover:text-[#A855F7] transition-colors cursor-default">
+            <span key={i} className="text-text-muted text-sm uppercase tracking-wide whitespace-nowrap hover:text-[#6C3CE0] transition-colors cursor-default">
               {tech}
             </span>
           ))}
@@ -122,7 +122,7 @@ export default function WebServicesPage() {
         </ScrollReveal>
         {studies.map((study) => (
           <div key={study.id} className="mb-16">
-            <StoryEngine study={study} accentColor="#A855F7" />
+            <StoryEngine study={study} accentColor="#6C3CE0" />
           </div>
         ))}
       </Section>
@@ -166,7 +166,7 @@ export default function WebServicesPage() {
           ].map((s, i) => (
             <ScrollReveal key={s.step} delay={i * 0.08}>
               <div className="flex gap-6">
-                <div className="text-sm font-mono text-[#A855F7] pt-1">{s.step}</div>
+                <div className="text-sm font-mono text-[#6C3CE0] pt-1">{s.step}</div>
                 <div>
                   <h3 className="font-semibold text-lg text-text-primary mb-2">{s.title}</h3>
                   <p className="text-text-secondary">{s.desc}</p>
@@ -178,7 +178,7 @@ export default function WebServicesPage() {
       </Section>
 
       {/* CTA */}
-      <Section id="contact" className="text-center bg-gradient-to-b from-transparent to-[#A855F7]/5">
+      <Section id="contact" className="text-center bg-gradient-to-b from-transparent to-[#6C3CE0]/5">
         <ScrollReveal>
           <h2 className="font-display text-h1 text-text-primary mb-4">See What We&apos;d Build For You</h2>
           <p className="text-lg text-text-secondary max-w-xl mx-auto mb-10">

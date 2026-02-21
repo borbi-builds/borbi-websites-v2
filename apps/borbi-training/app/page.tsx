@@ -14,7 +14,7 @@ const navLinks = [
 ];
 
 function TypingHero() {
-  const text = 'Learn to build AI agents that think.';
+  const text = 'Buy Pre-Trained AI Agents';
   const [displayed, setDisplayed] = useState('');
   const [showCursor, setShowCursor] = useState(true);
 
@@ -39,28 +39,28 @@ function TypingHero() {
   return (
     <h1 className="font-display text-display text-text-primary">
       {displayed}
-      <span className={`inline-block w-[3px] h-[0.9em] bg-[#F59E0B] ml-1 align-middle ${showCursor ? 'opacity-100' : 'opacity-0'}`} />
+      <span className={`inline-block w-[3px] h-[0.9em] bg-[#6C3CE0] ml-1 align-middle ${showCursor ? 'opacity-100' : 'opacity-0'}`} />
     </h1>
   );
 }
 
 const progressionSteps = [
-  { level: 'Beginner', color: '#F59E0B', skills: ['Prompt Engineering', 'Basic Chains', 'Tool Use'], pct: 25 },
-  { level: 'Intermediate', color: '#F59E0B', skills: ['RAG Systems', 'Multi-Step Agents', 'Memory'], pct: 50 },
-  { level: 'Advanced', color: '#F59E0B', skills: ['Custom Models', 'Production Deployment', 'Orchestration'], pct: 75 },
-  { level: 'Expert', color: '#F59E0B', skills: ['Multi-Agent Systems', 'Self-Improving Agents', 'Enterprise Scale'], pct: 100 },
+  { level: 'Beginner', color: '#6C3CE0', skills: ['Prompt Engineering', 'Basic Chains', 'Tool Use'], pct: 25 },
+  { level: 'Intermediate', color: '#6C3CE0', skills: ['RAG Systems', 'Multi-Step Agents', 'Memory'], pct: 50 },
+  { level: 'Advanced', color: '#6C3CE0', skills: ['Custom Models', 'Production Deployment', 'Orchestration'], pct: 75 },
+  { level: 'Expert', color: '#6C3CE0', skills: ['Multi-Agent Systems', 'Self-Improving Agents', 'Enterprise Scale'], pct: 100 },
 ];
 
 export default function TrainingPage() {
   return (
     <>
-      <Nav brand="Borbi | Training" links={navLinks} accentColor="#F59E0B" />
+      <Nav brand="Borbi | Training" links={navLinks} accentColor="#6C3CE0" />
 
       {/* Hero — The Cursor */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
         {/* Code editor background */}
         <div className="absolute inset-0 opacity-10">
-          <pre className="font-mono text-xs text-[#F59E0B]/30 p-20 leading-relaxed overflow-hidden">
+          <pre className="font-mono text-xs text-[#6C3CE0]/30 p-20 leading-relaxed overflow-hidden">
 {`import { Agent } from '@borbi/agents';
 
 const researcher = new Agent({
@@ -84,7 +84,7 @@ const result = await researcher.run(
 
         <div className="relative z-10 text-center max-w-[900px]">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }}
-            className="text-sm uppercase tracking-[0.04em] text-[#F59E0B] mb-6 font-mono">Borbi Training</motion.div>
+            className="text-sm uppercase tracking-[0.04em] text-[#6C3CE0] mb-6 font-mono">Borbi Training</motion.div>
           <TypingHero />
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.5, duration: 0.5 }}
             className="text-lg text-text-secondary mt-6 max-w-xl mx-auto">
@@ -186,12 +186,12 @@ const result = await researcher.run(
           ].map((course, i) => (
             <ScrollReveal key={course.title} delay={i * 0.08}>
               <div className="bg-bg-surface border border-white/[0.04] rounded-borbi-lg overflow-hidden group hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(245,158,11,0.1)] transition-all duration-300">
-                <div className="h-40 bg-gradient-to-br from-[#F59E0B]/10 to-bg-elevated flex items-center justify-center">
-                  <span className="font-mono text-[#F59E0B]/40 text-5xl">{'{ }'}</span>
+                <div className="h-40 bg-gradient-to-br from-[#6C3CE0]/10 to-bg-elevated flex items-center justify-center">
+                  <span className="font-mono text-[#6C3CE0]/40 text-5xl">{'{ }'}</span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs bg-[#F59E0B]/10 text-[#F59E0B] px-2 py-0.5 rounded-full">{course.level}</span>
+                    <span className="text-xs bg-[#6C3CE0]/10 text-[#6C3CE0] px-2 py-0.5 rounded-full">{course.level}</span>
                     <span className="text-xs text-text-muted">{course.duration}</span>
                   </div>
                   <h3 className="font-semibold text-lg text-text-primary mb-2">{course.title}</h3>
@@ -219,7 +219,7 @@ const result = await researcher.run(
       </Section>
 
       {/* CTA */}
-      <Section id="contact" className="text-center bg-gradient-to-b from-transparent to-[#F59E0B]/5">
+      <Section id="contact" className="text-center bg-gradient-to-b from-transparent to-[#6C3CE0]/5">
         <ScrollReveal>
           <h2 className="font-display text-h1 text-text-primary mb-4">Start Building Agents Today</h2>
           <p className="text-lg text-text-secondary max-w-xl mx-auto mb-10">

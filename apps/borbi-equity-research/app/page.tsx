@@ -32,7 +32,7 @@ function ValuationCalculator() {
           <input
             type="range" min="1" max="100" value={revenue}
             onChange={(e) => setRevenue(Number(e.target.value))}
-            className="w-full mt-2 accent-[#10B981]"
+            className="w-full mt-2 accent-[#6C3CE0]"
           />
           <div className="text-right text-sm text-text-secondary">${revenue}M</div>
         </div>
@@ -41,13 +41,13 @@ function ValuationCalculator() {
           <input
             type="range" min="0" max="100" value={growth}
             onChange={(e) => setGrowth(Number(e.target.value))}
-            className="w-full mt-2 accent-[#10B981]"
+            className="w-full mt-2 accent-[#6C3CE0]"
           />
           <div className="text-right text-sm text-text-secondary">{growth}%</div>
         </div>
         <div className="border-t border-white/[0.04] pt-6">
           <div className="text-sm text-text-muted uppercase tracking-wide mb-2">Estimated Valuation</div>
-          <div className="font-display text-h1 text-[#10B981]">${valuation}M</div>
+          <div className="font-display text-h1 text-[#6C3CE0]">${valuation}M</div>
           <div className="text-sm text-text-muted mt-1">{multiple}x revenue multiple</div>
         </div>
       </div>
@@ -59,7 +59,7 @@ function ValuationCalculator() {
 export default function EquityResearchPage() {
   return (
     <>
-      <Nav brand="Borbi | Research" links={navLinks} accentColor="#10B981" />
+      <Nav brand="Borbi | Research" links={navLinks} accentColor="#6C3CE0" />
 
       {/* Hero — The Terminal */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
@@ -70,18 +70,18 @@ export default function EquityResearchPage() {
             <motion.div className="flex gap-12 whitespace-nowrap font-mono text-xs"
               animate={{ x: [0, -800] }} transition={{ repeat: Infinity, duration: 15, ease: 'linear' }}>
               {['AAPL +2.3%', 'MSFT +1.1%', 'GOOGL -0.4%', 'AMZN +3.2%', 'NVDA +5.1%', 'META +0.8%', 'TSLA -1.2%', 'BRK.B +0.6%'].map((t) => (
-                <span key={t} className={t.includes('-') ? 'text-red-400' : 'text-[#10B981]'}>{t}</span>
+                <span key={t} className={t.includes('-') ? 'text-red-400' : 'text-[#6C3CE0]'}>{t}</span>
               ))}
             </motion.div>
           </div>
           {/* Data panels */}
-          <div className="absolute top-40 left-[10%] font-mono text-xs text-[#10B981]/40 space-y-1">
+          <div className="absolute top-40 left-[10%] font-mono text-xs text-[#6C3CE0]/40 space-y-1">
             <div>REV_GROWTH  25.4%</div>
             <div>EBITDA_M    $12.8M</div>
             <div>EV/REV      8.2x</div>
             <div>FCF_YIELD   4.1%</div>
           </div>
-          <div className="absolute bottom-40 right-[10%] font-mono text-xs text-[#10B981]/40 space-y-1">
+          <div className="absolute bottom-40 right-[10%] font-mono text-xs text-[#6C3CE0]/40 space-y-1">
             <div>COMP_TABLE  LOADED</div>
             <div>DCF_MODEL   READY</div>
             <div>SENSITIVITY OK</div>
@@ -90,10 +90,10 @@ export default function EquityResearchPage() {
 
         <div className="relative z-10 text-center max-w-[900px]">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }}
-            className="text-sm uppercase tracking-[0.04em] text-[#10B981] mb-6 font-mono">Borbi Equity Research</motion.div>
+            className="text-sm uppercase tracking-[0.04em] text-[#6C3CE0] mb-6 font-mono">Borbi Equity Research</motion.div>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.5 }}
             className="font-display text-display text-text-primary">
-            Institutional-Grade Research.<br />Startup-Friendly Speed.
+            Data-Driven Stock Analysis<br />for Serious Investors
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55, duration: 0.5 }}
             className="text-lg text-text-secondary mt-6 max-w-xl mx-auto">
@@ -162,7 +162,7 @@ export default function EquityResearchPage() {
         </ScrollReveal>
         {studies.map((study) => (
           <div key={study.id} className="mb-16">
-            <StoryEngine study={study} accentColor="#10B981" />
+            <StoryEngine study={study} accentColor="#6C3CE0" />
           </div>
         ))}
       </Section>
@@ -181,7 +181,7 @@ export default function EquityResearchPage() {
           ].map((s, i) => (
             <ScrollReveal key={s.title} delay={i * 0.06}>
               <details className="group bg-bg-surface border border-white/[0.04] rounded-borbi-lg">
-                <summary className="p-6 cursor-pointer flex justify-between items-center text-text-primary font-semibold hover:text-[#10B981] transition-colors">
+                <summary className="p-6 cursor-pointer flex justify-between items-center text-text-primary font-semibold hover:text-[#6C3CE0] transition-colors">
                   {s.title}
                   <span className="text-text-muted group-open:rotate-180 transition-transform">▾</span>
                 </summary>
@@ -193,7 +193,7 @@ export default function EquityResearchPage() {
       </Section>
 
       {/* CTA */}
-      <Section id="contact" className="text-center bg-gradient-to-b from-transparent to-[#10B981]/5">
+      <Section id="contact" className="text-center bg-gradient-to-b from-transparent to-[#6C3CE0]/5">
         <ScrollReveal>
           <h2 className="font-display text-h1 text-text-primary mb-4">Request a Sample Report</h2>
           <p className="text-lg text-text-secondary max-w-xl mx-auto mb-10">
