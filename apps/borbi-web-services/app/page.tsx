@@ -188,6 +188,50 @@ export default function WebServicesPage() {
         </ScrollReveal>
       </Section>
 
+      {/* Pricing */}
+      <Section className="bg-bg-surface/50">
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="font-display text-h1 text-text-primary">Custom Pricing</h2>
+            <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
+              Every project is unique. We build quotes based on scope, complexity, and timeline.
+            </p>
+          </div>
+        </ScrollReveal>
+        <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
+            <div className="rounded-borbi-lg p-12 bg-gradient-to-b from-[#6C3CE0]/10 to-bg-surface border border-[#6C3CE0]/50">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                {[
+                  { name: 'Branding', cost: 'Based on scope', items: ['Logo Design', 'Brand Guidelines', 'Design System'] },
+                  { name: 'Website Build', cost: 'From $5K', items: ['5-10 Pages', 'Mobile Responsive', 'CMS Integration'] },
+                  { name: 'E-Commerce', cost: 'From $15K', items: ['Product Catalog', 'Payment Integration', 'Inventory System'] },
+                ].map((tier) => (
+                  <div key={tier.name}>
+                    <h3 className="font-semibold text-lg text-text-primary mb-1">{tier.name}</h3>
+                    <div className="text-[#6C3CE0] font-display text-xl mb-4">{tier.cost}</div>
+                    <ul className="space-y-2">
+                      {tier.items.map((item) => (
+                        <li key={item} className="text-sm text-text-secondary flex items-start gap-2">
+                          <span className="text-[#6C3CE0] mt-1">→</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+              <div className="text-center pt-8 border-t border-white/[0.1]">
+                <p className="text-text-secondary mb-4">Interested? Let&apos;s talk about your project.</p>
+                <Button variant="primary" href="mailto:websites@borbi.com">
+                  Get a Custom Quote
+                </Button>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </Section>
+
       <Footer brand="Borbi | Websites" />
     </>
   );

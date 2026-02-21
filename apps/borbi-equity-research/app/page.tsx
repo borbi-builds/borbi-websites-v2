@@ -203,6 +203,45 @@ export default function EquityResearchPage() {
         </ScrollReveal>
       </Section>
 
+      {/* Subscription Tiers */}
+      <Section className="bg-bg-surface/50">
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="font-display text-h1 text-text-primary">Subscription Plans</h2>
+            <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
+              Choose your research depth. Cancel anytime.
+            </p>
+          </div>
+        </ScrollReveal>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {[
+            { name: 'Free', price: '0', desc: '1 report per month', features: ['1 Report/Month', 'Basic Analysis', 'Email Delivery', 'Public Discussion'] },
+            { name: 'Pro', price: '99', desc: 'Unlimited reports + analysis', features: ['Unlimited Reports', 'Advanced Analysis', 'Priority Email', 'Expert Annotations', 'Quarterly Strategy Call'], highlight: true },
+            { name: 'Elite', price: '499', desc: 'Dedicated research', features: ['Everything in Pro', 'Custom Research', 'Monthly 1:1 Call', 'Exclusive Alerts', 'Portfolio Advisory'] },
+          ].map((plan, i) => (
+            <ScrollReveal key={plan.name} delay={i * 0.08}>
+              <div className={`rounded-borbi-lg p-8 border transition-all duration-300 ${plan.highlight ? 'bg-gradient-to-b from-[#6C3CE0]/10 to-bg-surface border-[#6C3CE0]/50 transform scale-105' : 'bg-bg-surface border-white/[0.04] hover:border-white/[0.08]'}`}>
+                <h3 className="font-display text-2xl text-text-primary mb-2">{plan.name}</h3>
+                <div className="text-4xl font-display text-[#6C3CE0] mb-1">${plan.price}</div>
+                <div className="text-sm text-text-secondary mb-6">{plan.price === '0' ? '/forever' : '/month'}</div>
+                <p className="text-text-secondary text-sm mb-8">{plan.desc}</p>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((f) => (
+                    <li key={f} className="text-sm text-text-secondary flex items-start gap-3">
+                      <span className="text-[#6C3CE0] mt-1">✓</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Button variant={plan.highlight ? 'primary' : 'secondary'} className="w-full">
+                  {plan.price === '0' ? 'Start Free' : 'Subscribe'}
+                </Button>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </Section>
+
       <Footer brand="Borbi | Research" />
     </>
   );

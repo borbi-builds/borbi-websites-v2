@@ -219,6 +219,45 @@ export default function MarketingPage() {
         </ScrollReveal>
       </Section>
 
+      {/* Pricing */}
+      <Section className="bg-bg-surface/50">
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="font-display text-h1 text-text-primary">Transparent Pricing</h2>
+            <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
+              Choose the plan that fits your growth stage.
+            </p>
+          </div>
+        </ScrollReveal>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {[
+            { name: 'Starter', price: '500', desc: 'Lead generation & basic analytics', features: ['Lead Gen Funnel', 'Basic Analytics', 'Email Nurture', 'Monthly Reports'] },
+            { name: 'Growth', price: '2000', desc: 'Full funnel + paid media', features: ['Everything in Starter', 'Paid Media Campaigns', 'A/B Testing', 'Weekly Optimization', 'SEO Integration'], highlight: true },
+            { name: 'Scale', price: '5000', desc: 'Enterprise growth systems', features: ['Everything in Growth', 'Custom Integrations', 'Dedicated Account Manager', 'Revenue Attribution', 'Conversion Optimization'] },
+          ].map((plan, i) => (
+            <ScrollReveal key={plan.name} delay={i * 0.08}>
+              <div className={`rounded-borbi-lg p-8 border transition-all duration-300 ${plan.highlight ? 'bg-gradient-to-b from-[#6C3CE0]/10 to-bg-surface border-[#6C3CE0]/50 transform scale-105' : 'bg-bg-surface border-white/[0.04] hover:border-white/[0.08]'}`}>
+                <h3 className="font-display text-2xl text-text-primary mb-2">{plan.name}</h3>
+                <div className="text-4xl font-display text-[#6C3CE0] mb-1">${plan.price}</div>
+                <div className="text-sm text-text-secondary mb-6">/month</div>
+                <p className="text-text-secondary text-sm mb-8">{plan.desc}</p>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((f) => (
+                    <li key={f} className="text-sm text-text-secondary flex items-start gap-3">
+                      <span className="text-[#6C3CE0] mt-1">✓</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Button variant={plan.highlight ? 'primary' : 'secondary'} className="w-full">
+                  Get Started
+                </Button>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </Section>
+
       <Footer brand="Borbi | Marketing" />
     </>
   );

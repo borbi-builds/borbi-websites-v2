@@ -218,14 +218,61 @@ const result = await researcher.run(
         </ScrollReveal>
       </Section>
 
+      {/* Available Agents */}
+      <Section id="agents" className="bg-bg-surface/30">
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="font-display text-h1 text-text-primary">Pre-Trained Agents for Sale</h2>
+            <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
+              Deploy powerful AI agents instantly. Per-month subscription or one-time purchase.
+            </p>
+          </div>
+        </ScrollReveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {[
+            { name: 'Research Agent', desc: 'Deep web research & analysis', features: ['Multi-source search', 'Fact verification', 'Report generation'], monthlyPrice: 49, oneTimePrice: 299 },
+            { name: 'Creative Agent', desc: 'Content creation & copywriting', features: ['Blog posts', 'Ad copy', 'Social media'], monthlyPrice: 49, oneTimePrice: 299 },
+            { name: 'Coding Agent', desc: 'Debugging & code optimization', features: ['Bug fixing', 'Refactoring', 'Test generation'], monthlyPrice: 99, oneTimePrice: 599 },
+            { name: 'Trading Agent', desc: 'Market analysis & signals', features: ['Technical analysis', 'Signal generation', 'Risk assessment'], monthlyPrice: 199, oneTimePrice: 1199 },
+          ].map((agent, i) => (
+            <ScrollReveal key={agent.name} delay={i * 0.06}>
+              <div className="rounded-borbi-lg p-8 bg-bg-surface border border-white/[0.04] hover:border-white/[0.08] transition-all duration-300">
+                <h3 className="font-display text-2xl text-text-primary mb-2">{agent.name}</h3>
+                <p className="text-text-secondary text-sm mb-6">{agent.desc}</p>
+                <ul className="space-y-2 mb-8">
+                  {agent.features.map((f) => (
+                    <li key={f} className="text-sm text-text-secondary flex items-start gap-2">
+                      <span className="text-[#6C3CE0] mt-1">✓</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-col gap-3">
+                  <div className="text-center">
+                    <div className="text-sm text-text-muted mb-1">Monthly</div>
+                    <div className="text-2xl font-display text-[#6C3CE0]">${agent.monthlyPrice}</div>
+                  </div>
+                  <Button variant="secondary" className="w-full">Subscribe</Button>
+                  <div className="text-center">
+                    <div className="text-sm text-text-muted mb-1">Or one-time</div>
+                    <div className="text-xl font-display text-text-primary">${agent.oneTimePrice}</div>
+                  </div>
+                  <Button variant="text" className="w-full">Buy License</Button>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </Section>
+
       {/* CTA */}
       <Section id="contact" className="text-center bg-gradient-to-b from-transparent to-[#6C3CE0]/5">
         <ScrollReveal>
           <h2 className="font-display text-h1 text-text-primary mb-4">Start Building Agents Today</h2>
           <p className="text-lg text-text-secondary max-w-xl mx-auto mb-10">
-            Join 850+ learners building the next generation of AI agents. Start with a free intro module.
+            Join 850+ learners building the next generation of AI agents. Or deploy a pre-trained agent instantly.
           </p>
-          <Button variant="primary" size="lg" href="mailto:training@borbi.com">Start Learning</Button>
+          <Button variant="primary" size="lg" href="mailto:training@borbi.com">Start Now</Button>
         </ScrollReveal>
       </Section>
 

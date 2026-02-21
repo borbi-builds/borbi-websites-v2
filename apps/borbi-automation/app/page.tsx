@@ -166,6 +166,44 @@ export default function AutomationPage() {
         </ScrollReveal>
       </Section>
 
+      {/* Pricing */}
+      <Section className="bg-bg-surface/50">
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="font-display text-h1 text-text-primary">Automation Pricing</h2>
+            <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
+              From monitoring to complex orchestration. Scale as you grow.
+            </p>
+          </div>
+        </ScrollReveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {[
+            { name: 'Monitoring', price: '200', desc: 'System health & alerts', features: ['Real-time Monitoring', 'Alert Notifications', 'Monthly Reports', 'Slack Integration'] },
+            { name: 'Complex Automation', price: '2000', desc: 'Multi-step workflows', features: ['Everything in Monitoring', 'Custom Workflows', 'API Integrations', 'Data Pipelines', 'Dedicated Support'] },
+          ].map((plan, i) => (
+            <ScrollReveal key={plan.name} delay={i * 0.1}>
+              <div className="rounded-borbi-lg p-8 bg-bg-surface border border-white/[0.04] hover:border-white/[0.08] transition-all duration-300">
+                <h3 className="font-display text-2xl text-text-primary mb-2">{plan.name}</h3>
+                <div className="text-4xl font-display text-[#6C3CE0] mb-1">${plan.price}</div>
+                <div className="text-sm text-text-secondary mb-6">/month</div>
+                <p className="text-text-secondary text-sm mb-8">{plan.desc}</p>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((f) => (
+                    <li key={f} className="text-sm text-text-secondary flex items-start gap-3">
+                      <span className="text-[#6C3CE0] mt-1">✓</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Button variant="secondary" className="w-full">
+                  Learn More
+                </Button>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </Section>
+
       <Footer brand="Borbi | Automation" />
     </>
   );
