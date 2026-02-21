@@ -1,0 +1,22 @@
+{
+  "name": "@borbi/design-tokens",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./colors": "./dist/colors.js",
+    "./typography": "./dist/typography.js",
+    "./spacing": "./dist/spacing.js",
+    "./motion": "./dist/motion.js",
+    "./tailwind-preset": "./dist/tailwind-preset.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

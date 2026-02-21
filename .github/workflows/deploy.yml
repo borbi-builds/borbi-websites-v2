@@ -1,0 +1,59 @@
+name: Build & Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build design tokens
+        run: cd packages/design-tokens && npx tsc
+
+      - name: Build all apps
+        run: npx turbo build
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp -r apps/borbi-main/out/* _site/
+          for arm in marketing web-services automation equity-research training; do
+            mkdir -p _site/$arm
+            if [ -d "apps/borbi-$arm/out" ]; then
+              cp -r apps/borbi-$arm/out/* _site/$arm/
+            fi
+          done
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

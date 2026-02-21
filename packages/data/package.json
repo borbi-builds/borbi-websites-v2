@@ -1,0 +1,17 @@
+{
+  "name": "@borbi/data",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./case-studies": "./src/case-studies.ts"
+  },
+  "scripts": {
+    "build": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

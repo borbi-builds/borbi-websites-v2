@@ -1,0 +1,40 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./app/*",
+        "./components/*"
+      ],
+      "@borbi/components": [
+        "../../packages/components/src"
+      ],
+      "@borbi/design-tokens": [
+        "../../packages/design-tokens/src"
+      ],
+      "@borbi/data": [
+        "../../packages/data/src"
+      ]
+    },
+    "jsx": "preserve",
+    "noEmit": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "incremental": true,
+    "allowJs": true
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
