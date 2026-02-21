@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Borbi Enterprises — AI-Powered Consulting',
+  title: 'Borbi Enterprises — AI-Powered Business at Scale',
   description:
-    'AI-powered consulting across marketing, web, automation, research & training. We don\'t just consult. We build the machine.',
+    'AI-powered consulting across marketing, web, automation, research & training. Five specialized arms. One integrated system. Ready to scale your business.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /.next/
+
+Sitemap: https://borbi-builds.github.io/borbi-websites-v2/sitemap.xml

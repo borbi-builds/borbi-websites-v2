@@ -198,7 +198,7 @@ export default function HomePage() {
           <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-10">
             Book a 30-minute strategy call. We&apos;ll audit your current state and show you exactly where the leverage is.
           </p>
-          <Button variant="primary" size="lg" href="mailto:hello@borbi.com">
+          <Button variant="primary" size="lg" href="mailto:wyatt@borbibuilds.com">
             Book a Strategy Call
           </Button>
         </ScrollReveal>
